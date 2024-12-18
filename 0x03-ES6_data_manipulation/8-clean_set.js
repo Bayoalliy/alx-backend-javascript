@@ -3,7 +3,7 @@ export default function cleanSet(set, startString) {
     return '';
   }
   return [...set]
-    .filter((val) => val.startsWith(startString))
+    .filter((val) => val && val.startsWith(startString))
     .map((val) => val.replace(startString, ''))
     .join('-');
 }
